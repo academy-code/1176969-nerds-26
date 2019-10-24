@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Дизайн студия «Нёрдс»</title>
+	<link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="./css/min-style.css">
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+	<div class="container">
+		<nav class="navigation-site">
+			<div class="header-logo">
+				<a href="index.html" class="header-logo-link" title="Дизайн студия «Нёрдс»">
+					<img src="./images/nerds-logo.svg" class="header-logo-img" width="160" height="65" alt="Дизайн студия «Нёрдс»">
+				</a>
+			</div>
+			<ul class="menu">
+				<li><a href="index.html" title="На «Главную»">Студия</a></li>
+				<li><a href="index.html#clients" title="Раздел «Клиенты»">Клиенты</a></li>
+				<li><a class="menu-active" title="Раздел «Магазин">Магазин</a></li>
+				<li><a href="#contacts" title="Раздел «Контакты»">Контакты</a></li>
+			</ul>
+			<div class="header-basket">
+				<button type="button" class="basket" title="Открыть корзину">Корзина</button>
+			</div>
+		</nav>
+	</div>
+</header>
+<!-- End Header -->
+<!-- Main Content -->
+<main class="main">
+	<h1 class="visually-hidden">Магазин готовых шаблонов от дизайн студии «Нёрдс»</h1>
+	<section class="page-title">
+		<div class="container">
+			<h2 class="page-title_text">Магазин готовых шаблонов</h2>
+		</div>
+	</section>
+	<section class="items">
+		<h2 class="visually-hidden">Список готовых шаблонов</h2>
+		<div class="container">
+			<ul class="items-wrapper">
+				<li class="items-filter">
+					<form action="#" class="filter-form" id="filter-form">
+						<div class="filter-form_range">
+							<p class="filter-form_range_title">Стоимость:</p>
+							<div class="filter-form_range_block">
+								<div class="range-block_scale">
+									<div class="range-block_scale_bar"></div>
+								</div> 
+							</div>
+							<ul class="filter-form_range_print">
+								<li>
+									<label for="min-cost" class="range-block_scale_label_min">От</label>
+									<input type="text" name="min-cost" id="min-cost" class="range-block_scale_input_min" min="0" max="1499" value="0">
+								</li>
+								<li>
+									<label for="max-cost" class="range-block_scale_label_max">До</label>
+									<input type="text" name="max-cost" id="max-cost" class="range-block_scale_input_max" min="1" max="1500" value="1500">
+								</li>
+							</ul>
+						</div>
+						<div class="filter-form_radio">
+							<p class="filter-form_radio_title">Сетка:</p>
+							<ul class="filter-form_radio_block">
+								<li class="filter-form_radio_block_list">
+									<input type="radio" name="radio-filter" id="radio-adapt" class="filter-form_radio_input" checked> <!-- +disabled -->
+									<label for="radio-adapt" class="filter-form_radio_label">Адаптивная</label>
+								</li>
+								<li class="filter-form_radio_block_list">
+									<input type="radio" name="radio-filter" id="radio-fix" class="filter-form_radio_input"><!-- +disabled -->
+									<label for="radio-fix" class="filter-form_radio_label">Фиксированная</label>
+								</li>
+								<li class="filter-form_radio_block_list">
+									<input type="radio" name="radio-filter" id="radio-stretch" class="filter-form_radio_input"><!-- +disabled -->
+									<label for="radio-stretch" class="filter-form_radio_label">Резиновая</label>
+								</li>
+							</ul>
+						</div>
+						<div class="filter-form_checkbox">
+							<p class="filter-form_checkbox_title">Особенности:</p>
+							<ul class="filter-form_checkbox_block">
+								<li class="filter-form_checkbox_block_list">
+									<input type="checkbox" name="checkbox-filter" id="checkbox-slider" class="filter-form_checkbox_input" checked><!-- +disabled -->
+									<label for="checkbox-slider" class="filter-form_checkbox_label">Слайдер</label>
+								</li>
+								<li class="filter-form_checkbox_block_list">
+									<input type="checkbox" name="checkbox-filter" id="checkbox-advantages" class="filter-form_checkbox_input"><!-- +disabled -->
+									<label for="checkbox-advantages" class="filter-form_checkbox_label">Блок преимуществ</label>
+								</li>
+								<li class="filter-form_checkbox_block_list">
+									<input type="checkbox" name="checkbox-filter" id="checkbox-news" class="filter-form_checkbox_input" checked><!-- +disabled -->
+									<label for="checkbox-news" class="filter-form_checkbox_label">Новости</label>
+								</li>
+								<li class="filter-form_checkbox_block_list">
+									<input type="checkbox" name="checkbox-filter" id="checkbox-gallery" class="filter-form_checkbox_input"><!-- +disabled -->
+									<label for="checkbox-gallery" class="filter-form_checkbox_label">Галерея</label>
+								</li>
+								<li class="filter-form_checkbox_block_list">
+									<input type="checkbox" name="checkbox-filter" id="checkbox-basket" class="filter-form_checkbox_input"><!-- +disabled -->
+									<label for="checkbox-basket" class="filter-form_checkbox_label">Корзина</label>
+								</li>
+							</ul>
+						</div>
+						<input type="submit" name="submit" class="filter-form_submit" value="Показать">
+					</form>
+				</li>
+				<li class="items-list">
+					<ul class="items-list_sort">
+						<li><p class="items-list_sort_title">Сортировать:</p></li>
+						<li><a href="#" class="sort-button sort-active items-list_price" title="Сортировать по цене">По цене</a></li>
+						<li><a href="#" class="sort-button items-list_type" title="Сортировать по типу">По типу</a></li>
+						<li><a href="#" class="sort-button items-list_name" title="Сортировать по названию">По названию</a></li>
+						<li><a href="#" class="sort-button items-list_down" title="Показать первые"></a></li>
+						<li><a href="#" class="sort-button items-list_up" title="Показать последние"></a></li>
+					</ul>
+
+					<ul class="items-list_display">
+						<li class="items-list_dispay_item">
+							<a href="#" class="items-list_dispay_item_link" title="Открыть шаблон">
+								<ul class="display-item_head">
+									<li class="head_circle"></li>
+									<li class="head_circle"></li>
+									<li class="head_circle"></li>
+								</ul>
+								<div class="display-item_body">
+									<img src="./images/img-sedona.jpg" class="display-item_body_img" width="360" height="576" alt="Седона - прекрасный город в аризоне">
+									<ul class="display-item_body_description">
+										<li><p class="item-body_description_title">Sedona</p></li>
+										<li><p class="item-body_description_text">Информационный сайт<br>для туристов</p></li>
+										<li><a href="#" class="item-body_description_button" title="Купить">9 900 руб.</a></li>
+									</ul>
+								</div>
+							</a>
+						</li>
+						<li class="items-list_dispay_item">
+							<a href="#" class="items-list_dispay_item_link" title="Открыть шаблон">
+								<ul class="display-item_head">
+									<li class="head_circle"></li>
+									<li class="head_circle"></li>
+									<li class="head_circle"></li>
+								</ul>
+								<div class="display-item_body">
+									<img src="./images/img-pink.jpg" class="display-item_body_img" width="360" height="576" alt="Седона - прекрасный город в аризоне">
+									<ul class="display-item_body_description">
+										<li><p class="item-body_description_title">Sedona</p></li>
+										<li><p class="item-body_description_text">Информационный сайт<br>для туристов</p></li>
+										<li><a href="#" class="item-body_description_button" title="Купить">9 900 руб.</a></li>
+									</ul>
+								</div>
+							</a>
+						</li>
+						<li class="items-list_dispay_item">
+							<a href="#" class="items-list_dispay_item_link" title="Открыть шаблон">
+								<ul class="display-item_head">
+									<li class="head_circle"></li>
+									<li class="head_circle"></li>
+									<li class="head_circle"></li>
+								</ul>
+								<div class="display-item_body">
+									<img src="./images/img-barbershop.jpg" class="display-item_body_img" width="360" height="576" alt="Седона - прекрасный город в аризоне">
+									<ul class="display-item_body_description">
+										<li><p class="item-body_description_title">Sedona</p></li>
+										<li><p class="item-body_description_text">Информационный сайт<br>для туристов</p></li>
+										<li><a href="#" class="item-body_description_button" title="Купить">9 900 руб.</a></li>
+									</ul>
+								</div>
+							</a>
+						</li>						
+						<li class="items-list_dispay_item">
+							<a href="#" class="items-list_dispay_item_link" title="Открыть шаблон">
+								<ul class="display-item_head">
+									<li class="head_circle"></li>
+									<li class="head_circle"></li>
+									<li class="head_circle"></li>
+								</ul>
+								<div class="display-item_body">
+									<img src="./images/img-mishka.jpg" class="display-item_body_img" width="360" height="576" alt="Седона - прекрасный город в аризоне">
+									<ul class="display-item_body_description">
+										<li><p class="item-body_description_title">Sedona</p></li>
+										<li><p class="item-body_description_text">Информационный сайт<br>для туристов</p></li>
+										<li><a href="#" class="item-body_description_button" title="Купить">9 900 руб.</a></li>
+									</ul>
+								</div>
+							</a>
+						</li>
+						<li class="items-list_dispay_item">
+							<a href="#" class="items-list_dispay_item_link" title="Открыть шаблон">
+								<ul class="display-item_head">
+									<li class="head_circle"></li>
+									<li class="head_circle"></li>
+									<li class="head_circle"></li>
+								</ul>
+								<div class="display-item_body">
+									<img src="./images/img-aplus.jpg" class="display-item_body_img" width="360" height="576" alt="Седона - прекрасный город в аризоне">
+									<ul class="display-item_body_description">
+										<li><p class="item-body_description_title">Sedona</p></li>
+										<li><p class="item-body_description_text">Информационный сайт<br>для туристов</p></li>
+										<li><a href="#" class="item-body_description_button" title="Купить">9 900 руб.</a></li>
+									</ul>
+								</div>
+							</a>
+						</li>
+						<li class="items-list_dispay_item">
+							<a href="#" class="items-list_dispay_item_link" title="Открыть шаблон">
+								<ul class="display-item_head">
+									<li class="head_circle"></li>
+									<li class="head_circle"></li>
+									<li class="head_circle"></li>
+								</ul>
+								<div class="display-item_body">
+									<img src="./images/img-kvast.jpg" class="display-item_body_img" width="360" height="576" alt="Седона - прекрасный город в аризоне">
+									<ul class="display-item_body_description">
+										<li><p class="item-body_description_title">Sedona</p></li>
+										<li><p class="item-body_description_text">Информационный сайт<br>для туристов</p></li>
+										<li><a href="#" class="item-body_description_button" title="Купить">9 900 руб.</a></li>
+									</ul>
+								</div>
+							</a>
+						</li>						
+					</ul>
+					<ul class="items-list_paggination">
+						<li><a class="items-list_paggination_button paggination-active" title="Переход на первую страницу каталога">1</a></li>
+						<li><a href="#" class="items-list_paggination_button" title="Переход на первую страницу каталога">2</a></li>
+						<li><a href="#" class="items-list_paggination_button" title="Переход на первую страницу каталога">3</a></li>
+						<li><a href="#" class="items-list_paggination_button paggination-next" title="Переход на первую страницу каталога">Cледующая</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</section>
+	<section class="contacts">
+		<h2 class="visually-hidden">Контакты</h2>
+		<div class="container">
+			<ul class="contacts-block" id="contacts">
+				<li>
+					<h3 class="contacts-block_title">NЁRDS DESIGN STUDIO</h3>
+					<address class="contacts-block_text">
+						191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8
+					</address>
+					<p class="contacts-block_phone">тел.&nbsp;<a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
+					<a href="form-page.html" onclick="return false" class="contacts-block_button" target="_blank" title="Открыть форму обратной связи">Напишите нам</a>
+				</li>
+			</ul>
+		</div>
+		<div id="contacts-map" class="contacts-map"></div>
+	</section>
+</main>
+<!-- End Main Content -->
+<!-- Footer -->
+<footer class="footer">
+	<div class="container">
+		<ul class="footer-split">
+			<li>
+				<ul class="footer-social_icons">
+					<li class="vk">
+						<a href="https://vk.com/" class="social-link vk-link" title="Наша группа в Вконтакте" target="_blank">
+							<img src="./images/vk-icon.svg" class="icon vk-icon" alt="Иконка «Вконтакте»" width="26" height="15">
+						</a>
+					</li>
+					<li class="fb">
+						<a href="https://www.facebook.com/" class="social-link fb-link" title="Наша группа в Facebook" target="_blank">
+							<img src="./images/fb-icon.svg" class="icon fb-icon" alt="Иконка «Facebook»" width="12" height="22">
+						</a>
+					</li>
+					<li class="inst">
+						<a href="https://www.instagram.com/" class="social-link inst-link" title="Наш аккаунт в Instagram" target="_blank">
+							<img src="./images/insta-icon.svg" class="icon inst-icon" alt="Иконка «Instagram»" width="21" height="21">
+						</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<p class="footer-title">Давайте дружить, это выгодно!</p>
+				<p class="footer-text">Скидка 10% для друзей из социальных сетей.</p>
+			</li>
+		</ul>
+	</div>
+</footer>
+<!-- End Footer -->
+<!-- Modal Form -->
+<section class="modal" data-modal="form">
+	<h2 class="visually-hidden">Форма обратной связи</h2>
+	<div class="modal-backdrop"></div>
+	<div class="modal-content">
+		<ul class="modal-content_header">
+			<li><p class="modal-content_header_title">Напишите нам</p></li>
+			<li><button type="button" class="modal-close"></button></li>
+		</ul>
+		<div class="modal-content_body">
+			<form action="#" method="POST" class="modal-form">
+				<ul class="modal-form_container">
+					<li class="modal-form_name">
+						<label for="input-name" class="modal-form_name_label" title="Введите ваше имя и фамилию">Ваше имя:</label>
+						<input type="text" name="name" id="input-name" class="inputs modal-form_name_input" placeholder="Имя Фамилия" autofocus required>
+					</li>
+					<li class="modal-form_email">
+						<label for="input-email" class="modal-form_email_label" title="Введите ваш email">Ваш e-mail:</label>
+						<input type="email" name="email" id="input-email" class="inputs modal-form_email_input" placeholder="email@example.com" required>
+					</li>
+				</ul>
+				<label for="input-text" class="modal-form_text_label">Текст письма:</label>
+				<textarea name="text" id="input-text" rows="5" class="inputs modal-form_text_input" placeholder="В свободной форме" title="Опишите ваш вопрос в свободной форме" required></textarea>
+				<input type="submit" name="button" class="modal-form_button_submit" value="Отправить" title="Отправить форму">
+			</form>
+		</div>
+	</div>
+</section>
+<!-- End Modal Form -->
+<script src="./js/min-main.js"></script>
+</body>
+</html>
