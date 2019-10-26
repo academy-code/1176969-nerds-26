@@ -38,7 +38,6 @@ button { /* Общий стиль для button */
 .container { /* Контейнер для статической ширины всего контента */
 	width: 1160px;
 	margin: 0 auto;
-	padding: 0 20px;
 }
 .grey-line { /* Линия между секциями */
 	border-bottom: 2px solid #eeeeee;
@@ -56,8 +55,7 @@ button { /* Общий стиль для button */
 /* HEADER */
 .header { /* Общий стиль шапки */
 	padding: 49px 0 18px 0;
-	background:  #eeeeee url("../images/grey_back.png") repeat-x center;
-	background-size: contain;
+	background:  #eeeeee;
 }
 .navigation-site { /* Делаем nav гибким блоком */
 	display: -webkit-box;
@@ -112,7 +110,7 @@ button { /* Общий стиль для button */
 	padding-top: 1px;
 }
 .navigation-site .header-basket button.basket:before { /* Иконка корзины */
-	content: url('../images/cart-icon.svg');
+	content: url("../images/cart-icon.svg");
 	padding-right: 26px;
 	opacity: 0.2;
 	vertical-align: middle;
@@ -148,7 +146,7 @@ button { /* Общий стиль для button */
 /* ADVANTAGES - SLIDER */
 .slider { 
 	position: relative;
-	background:  #eeeeee url("../images/grey_back.png") repeat-x center;
+	background:  #eeeeee;
 	background-size: contain;
 }
 .slider-wrapper {
@@ -302,6 +300,9 @@ button { /* Общий стиль для button */
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
 	padding: 80px 60px 80px 0;
+}
+.services-list_block {
+	width: 300px;
 }
 .services-list .services-title { /* Заголовок списка */
 	margin: 26px 0;
@@ -669,7 +670,7 @@ button { /* Общий стиль для button */
 }
 /* CATALOG */
 .page-title {
-	background:  #eeeeee url("../images/grey_back.png") repeat-x center;
+	background:  #eeeeee;
 	padding: 82px 0 116px;
 }
 .page-title_text {
@@ -1099,7 +1100,6 @@ button { /* Общий стиль для button */
 .items-list_dispay_item {
 	position: relative;
 	overflow: hidden;
-	cursor: pointer;
 	margin-bottom: 33px;
 	-webkit-transition: -webkit-box-shadow 0.2s ease;
 	transition: -webkit-box-shadow 0.2s ease;
@@ -1169,11 +1169,11 @@ button { /* Общий стиль для button */
 	        box-sizing: border-box;
 	padding: 35px 80px 0;
 	background-color: #eeeeee;
-	-webkit-transition: -webkit-transform 0.6s ease;
-	transition: -webkit-transform 0.6s ease;
-	-o-transition: transform 0.6s ease;
-	transition: transform 0.6s ease;
-	transition: transform 0.6s ease, -webkit-transform 0.6s ease;
+	-webkit-transition: -webkit-transform 0.2s ease;
+	transition: -webkit-transform 0.2s ease;
+	-o-transition: transform 0.2s ease;
+	transition: transform 0.2s ease;
+	transition: transform 0.2s ease, -webkit-transform 0.2s ease;
 	-webkit-transform: translateY(101%);
 	    -ms-transform: translateY(101%);
 	        transform: translateY(101%);
@@ -1187,6 +1187,7 @@ button { /* Общий стиль для button */
 	opacity: 1;
 }
 .item-body_description_title {
+	display: block;
 	margin: 0 0 15px;
 	color: #000000;
 	font-family: "Roboto", "Arial", sans-serif;
@@ -1195,11 +1196,12 @@ button { /* Общий стиль для button */
 	line-height: 30px;
 	text-align: center;
 	text-transform: uppercase;
+	text-decoration: none;
 }
-.items-list_dispay_item:hover .item-body_description_title {
+.items-list_dispay_item .item-body_description_title:hover {
 	color: #fb565a;
 }
-.items-list_dispay_item:active .item-body_description_title {
+.items-list_dispay_item .item-body_description_title:active {
 	color: rgba(0, 0, 0, 0.3);
 }
 .item-body_description_text {
