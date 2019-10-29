@@ -5,7 +5,7 @@
 	<title>Дизайн студия «Нёрдс»</title>
 	<link rel="shortcut icon" href="./images/favicon.ico">
 	<link rel="stylesheet" href="./css/normalize.css">
-	<link rel="stylesheet" href="./css/min-style.css">
+	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <!-- Header -->
@@ -14,7 +14,7 @@
 		<nav class="navigation-site">
 			<div class="header-logo">
 				<a class="header-logo-link-disabled" title="Дизайн студия «Нёрдс»">
-					<img src="./images/nerds-logo.png" class="header-logo-img" width="160" height="65" alt="Дизайн студия «Нёрдс»">
+					<img src="./images/nerds-logo.svg" class="header-logo-img" width="160" height="65" alt="Дизайн студия «Нёрдс»">
 				</a>
 			</div>
 			<ul class="menu">
@@ -24,7 +24,7 @@
 				<li><a href="#contacts" title="Раздел «Контакты»">Контакты</a></li>
 			</ul>
 			<div class="header-basket">
-				<button type="button" class="basket" title="Открыть корзину">Корзина</button>
+				<a href="#" class="basket" title="Открыть корзину">Корзина</a>
 			</div>
 		</nav>
 	</div>
@@ -37,9 +37,9 @@
 		<h2 class="visually-hidden">Преимущества</h2>
 		<div class="container">
 			<div class="slider-wrapper">
-				<input type="radio" name="slider-toggle" id="btn-1" checked>
-				<input type="radio" name="slider-toggle" id="btn-2">
-				<input type="radio" name="slider-toggle" id="btn-3">
+				<input type="radio" name="slider-toggle" id="btn-1" class="slider-toggle_btn-1" checked>
+				<input type="radio" name="slider-toggle" id="btn-2" class="slider-toggle_btn-2">
+				<input type="radio" name="slider-toggle" id="btn-3" class="slider-toggle_btn-3">
 				<div class="slider-container">
 					<div class="slide slide-1">
 						<div class="slide-left-side">
@@ -175,16 +175,14 @@
 	<section class="contacts">
 		<h2 class="visually-hidden">Контакты</h2>
 		<div class="container">
-			<ul class="contacts-block" id="contacts">
-				<li>
-					<h3 class="contacts-block_title">NЁRDS DESIGN STUDIO</h3>
-					<address class="contacts-block_text">
-						191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8
-					</address>
-					<p class="contacts-block_phone">тел.&nbsp;<a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
-					<a href="form-page.html" onclick="return false" class="contacts-block_button" target="_blank" title="Открыть форму обратной связи">Напишите нам</a>
-				</li>
-			</ul>
+			<div class="contacts-block" id="contacts">
+				<h3 class="contacts-block_title">NЁRDS DESIGN STUDIO</h3>
+				<address class="contacts-block_text">
+					191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8
+				</address>
+				<p class="contacts-block_phone">тел.&nbsp;<a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
+				<a href="form-page.html" onclick="return false" class="contacts-block_button" target="_blank" title="Открыть форму обратной связи">Напишите нам</a>
+			</div>
 		</div>
 		<div id="contacts-map" class="contacts-map"></div>
 	</section>
@@ -229,7 +227,7 @@
 			<li><button type="button" class="modal-close"></button></li>
 		</ul>
 		<div class="modal-content_body">
-			<form action="#" method="POST" class="modal-form" id="modal-form">
+			<form action="#" method="post" class="modal-form" id="modal-form">
 				<ul class="modal-form_container">
 					<li class="modal-form_name">
 						<label for="input-name" class="modal-form_name_label" title="Введите ваше имя и фамилию">Ваше имя:</label>

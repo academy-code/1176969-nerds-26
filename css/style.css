@@ -20,7 +20,11 @@
 body { /* Минимальная ширина для body */
 	min-width: 1200px; 
 }
-ul { /* Общий стиль для ul */
+.menu, .services-list, .studio-info_list,
+.studio-info_row, .studio-clients, .footer-social_icons,
+.modal-content_header, .modal-form_container, .filter-form_range_print,
+.filter-form_radio_block, .filter-form_checkbox_block,
+.items-list_sort, .items-list_display, .items-list_paggination { /* Общий стиль для ul */
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
@@ -54,7 +58,7 @@ button { /* Общий стиль для button */
 }
 /* HEADER */
 .header { /* Общий стиль шапки */
-	padding: 49px 0 18px 0;
+	padding-top: 49px;
 	background:  #eeeeee;
 }
 .navigation-site { /* Делаем nav гибким блоком */
@@ -85,6 +89,7 @@ button { /* Общий стиль для button */
 	    flex-basis: 440px;
 	-ms-flex-wrap: wrap;
 	    flex-wrap: wrap;
+    padding-top: 12px;
 }
 .navigation-site .header-basket { /* Задаём размер блоку с корзиной */
 	display: -webkit-box;
@@ -95,9 +100,10 @@ button { /* Общий стиль для button */
 	        justify-content: flex-end;
 	-ms-flex-preferred-size: 360px;
 	    flex-basis: 360px;
+    padding-top: 12px;
 }
 .navigation-site .menu a,
-.navigation-site .header-basket button.basket { /* Стиль для меню и корзины */
+.navigation-site .basket { /* Стиль для меню и корзины */
 	color: #000000;
 	font-family: "Roboto", "Arial", sans-serif;
 	font-size: 16px;
@@ -106,41 +112,38 @@ button { /* Общий стиль для button */
 	text-decoration: none;
 	text-transform: uppercase;
 }
-.navigation-site .header-basket button.basket { /* Убираем разницу между <a> и <button>   */
-	padding-top: 1px;
-}
-.navigation-site .header-basket button.basket:before { /* Иконка корзины */
+.navigation-site .basket:before { /* Иконка корзины */
 	content: url("../images/cart-icon.svg");
 	padding-right: 26px;
 	opacity: 0.2;
 	vertical-align: middle;
 }
-.navigation-site .header-logo-link:hover .header-logo-img {
+.header-logo-link:hover .header-logo-img {
 	opacity: 0.8;
 }
-.navigation-site .header-logo-link:active .header-logo-img {
+.header-logo-link:active .header-logo-img {
 	opacity: 0.3;
 }
-.navigation-site .menu a:hover,
-.navigation-site .header-basket button.basket:hover {
+.menu a:hover,
+.navigation-site .basket:hover {
 	color: #fb565a;
 }
-.navigation-site .menu a:active,
-.navigation-site .header-basket button.basket:active {
+.menu a:active,
+.navigation-site .basket:active {
 	color: #000000;
 	opacity: 0.3;
 }
-.navigation-site .header-basket button.basket:active:before { /* Выравниваем цвет иконки корзины при нажатии */
+.navigation-site .basket:active:before { /* Выравниваем цвет иконки корзины при нажатии */
 	opacity: 0.7;
 }
 .menu-active {
 	border-bottom: 2px solid #fb565a;
 	padding-bottom: 10px;
 }
-.navigation-site .menu .menu-active:hover {
+.menu .menu-active:hover {
 	color: #000000;
 }
-.navigation-site .menu .menu-active:active {
+.menu .menu-active:active {
 	opacity: 1;
 }
 /* ADVANTAGES - SLIDER */
@@ -155,37 +158,37 @@ button { /* Общий стиль для button */
 .slider-container { /* Общая ширина слайдера */
   	width: 300%;
 }
-.slider-wrapper .slider-container .slide { /* Делаем слайд гибким и задаем фиксированную ширину */
+.slider-container .slide { /* Делаем слайд гибким и задаем фиксированную ширину */
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-align: end;
-	    -ms-flex-align: end;
-	        align-items: flex-end;
+	-webkit-box-align: start;
+	    -ms-flex-align: start;
+	        align-items: flex-start;
 	width: 1160px;
 	float: left;
 }
-.slider-container .slide .slide-left-side { /* Левая часть слайда */
+.slider-container .slide-left-side { /* Левая часть слайда */
 	position: absolute;
-	width: 515px;
+	width: 520px;
 	z-index: 2;
 }
-.slider-container .slide .slide-title { /* Заголовок слайда */
-	margin: 67px 0 28px 0;
+.slider-container .slide-title { /* Заголовок слайда */
+	margin: 73px 0 28px 0;
 	color: #000000;
 	font-family: "Roboto", "Arial", sans-serif;
 	font-size: 55px;
 	font-weight: 500;
 	line-height: 55px;
 }
-.slider-container .slide .slide-text { /* Текст слайда */
+.slider-container .slide-text { /* Текст слайда */
 	color: #283136;
 	font-family: "Roboto", "Arial", sans-serif;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
 }
-.slider-container .slide .slide-button { /* Кнопка слайда */
+.slider-container .slide-button { /* Кнопка слайда */
 	display: block;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
@@ -211,39 +214,39 @@ button { /* Общий стиль для button */
 	    -ms-user-select: none;
 	        user-select: none;
 }
-.slider-container .slide .slide-button:hover {
+.slider-container .slide-button:hover {
 	background-color: #e74246;
 }
-.slider-container .slide .slide-button:active {
+.slider-container .slide-button:active {
 	-webkit-box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 	        box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 	background-color: #d7373b;
 	color: rgba(255, 255, 255, 0.3);
 }
-.slider-container .slide .slide-right-side { /* Правая часть слайда */
+.slider-container .slide-right-side { /* Правая часть слайда */
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	height: 430px;
 	z-index: 1;
 }
-.slider-container .slide .slide-right-side img { 
+.slider-container .slide-right-side img { 
 	-ms-flex-item-align: end; 
 	    align-self: flex-end;
 }
-.slider-container .slide-1 .slide-right-side  { /* Отсуп для первого слайда */
+.slide-1 .slide-right-side  { /* Отсуп для первого слайда */
 	margin-left: 431px;
 }
-.slider-container .slide-2 .slide-right-side  { /* Отсуп для второго слайда */
+.slide-2 .slide-right-side  { /* Отсуп для второго слайда */
 	margin-left: 496px;
 }
-.slider-container .slide-3 .slide-right-side  { /* Отсуп для третьего слайда */
+.slide-3 .slide-right-side  { /* Отсуп для третьего слайда */
 	margin-left: 401px;
 }
-.slider .slider-wrapper input[type="radio"] { /* Скрываем стандартные точки */
+.slider-wrapper input[type="radio"] { /* Скрываем стандартные точки */
  	display: none;
 }
-.slider .slider-wrapper .slider-controls { /* Создаем свои точки */
+.slider-wrapper .slider-controls { /* Создаем свои точки */
 	position: absolute;
   	bottom: 96px;
   	left: 50%;
@@ -252,10 +255,9 @@ button { /* Общий стиль для button */
   	        transform: translateX(-50%);
   	z-index: 3;
 }
-.slider .slider-wrapper .slider-controls label {
+.slider-wrapper .slider-controls label {
   	display: inline-block;
   	vertical-align: baseline;
-  	margin-right: 17px;
   	width: 8px;
   	height: 8px;
   	border: 5px solid #ffffff;
@@ -270,23 +272,26 @@ button { /* Общий стиль для button */
   	transition: box-shadow 0.2s;
   	transition: box-shadow 0.2s, -webkit-box-shadow 0.2s;
 }
-#btn-1:checked ~ .slider-controls label[for="btn-1"],
-#btn-2:checked ~ .slider-controls label[for="btn-2"],
-#btn-3:checked ~ .slider-controls label[for="btn-3"] { /* Фокус на выбранной точке */
+.slider-wrapper .slider-controls label:nth-child(2) {
+	margin: 0 12px;
+}
+.slider-toggle_btn-1:checked ~ .slider-controls label[for="btn-1"],
+.slider-toggle_btn-2:checked ~ .slider-controls label[for="btn-2"],
+.slider-toggle_btn-3:checked ~ .slider-controls label[for="btn-3"] { /* Фокус на выбранной точке */
   	-webkit-box-shadow: inset 0px 0px 0px 2px #c1c1c1;
   	        box-shadow: inset 0px 0px 0px 2px #c1c1c1;
 }
-#btn-1:checked ~ .slider-container .slide { /* Движение слайда */
+.slider-toggle_btn-1:checked ~ .slider-container .slide { /* Движение слайда */
   	-webkit-transform: translate(0);
   	    -ms-transform: translate(0);
   	        transform: translate(0);
 }
-#btn-2:checked ~ .slider-container .slide { /* Движение слайда */
+.slider-toggle_btn-2:checked ~ .slider-container .slide { /* Движение слайда */
   	-webkit-transform: translate(-1160px);
   	    -ms-transform: translate(-1160px);
   	        transform: translate(-1160px);
 }
-#btn-3:checked ~ .slider-container .slide { /* Движение слайда */
+.slider-toggle_btn-3:checked ~ .slider-container .slide { /* Движение слайда */
   	-webkit-transform: translate(-2320px);
   	    -ms-transform: translate(-2320px);
   	        transform: translate(-2320px);
@@ -305,7 +310,7 @@ button { /* Общий стиль для button */
 	width: 300px;
 }
 .services-list .services-title { /* Заголовок списка */
-	margin: 26px 0;
+	margin: 18px 0 15px;
 	color: #000000;
 	font-family: "Roboto", "Arial", sans-serif;
 	font-size: 24px;
@@ -391,10 +396,10 @@ button { /* Общий стиль для button */
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	margin: 35px 0 40px 0;
+	margin: 35px 0 35px;
 }
 .studio-header .studio-header_title {
-	margin: 40px 0 35px 0;
+	margin: 35px 0 35px;
 	color: #000000;
 	font-family: "Roboto", "Arial", sans-serif;
 	font-size: 45px;
@@ -419,7 +424,7 @@ button { /* Общий стиль для button */
 	-webkit-box-align: start;
 	    -ms-flex-align: start;
 	        align-items: flex-start;
-	padding-bottom: 76px;
+	padding-bottom: 55px;
 }
 .studio-info .studio-info_title {
 	margin: 0 0 25px 0;
@@ -431,7 +436,7 @@ button { /* Общий стиль для button */
 	text-transform: uppercase;
 }
 .studio-info .studio-info_text {
-	margin: 0 0 25px 0;
+	margin: 0 0 23px 0;
 	color: #283136;
 	font-family: "Roboto", "Arial", sans-serif;
 	font-size: 16px;
@@ -455,9 +460,9 @@ button { /* Общий стиль для button */
 .studio-info .studio-info_right {
 	width: 360px;
 }
-.studio-info .studio-info_right .studio-info_title {
+.studio-info_right .studio-info_title {
 	text-align: center;
-	margin-bottom: 49px;
+	margin-bottom: 38px;
 }
 .studio-info_right .studio-info_row {
 	display: -webkit-box;
@@ -468,7 +473,7 @@ button { /* Общий стиль для button */
 	        justify-content: space-between;
 } 
 .studio-info_right .studio-info_percent {
-	margin-right: 25px;
+	margin-right: 20px;
 }
 .studio-info_right .studio-info_percent_title {
 	margin: 0 0 10px 0;
@@ -477,12 +482,11 @@ button { /* Общий стиль для button */
 	font-size: 45px;
 	font-weight: 700;
 }
-.studio-info_right .studio-info_percent_title .percent {
+.studio-info_percent_title .percent {
 	vertical-align: top;
 	font-size: 30px;
 }
 .studio-info_right .studio-info_percent_text {
-	margin: 0;
 	color: #283136;
 	font-family: "Roboto", "Arial", sans-serif;
 	font-size: 16px;
@@ -522,9 +526,9 @@ button { /* Общий стиль для button */
 .contacts .contacts-block {
 	position: absolute;
 	width: 319px;
-	height: 308px;
+	height: auto;
 	margin: 54px 0;
-	padding: 54px 50px 47px;
+	padding: 48px 50px 47px;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 	background-color: #ffffff;
@@ -539,7 +543,7 @@ button { /* Общий стиль для button */
 	height: 416px;
 }
 .contacts-block .contacts-block_title {
-	margin: 0 0 18px 0;
+	margin: 0 0 23px 0;
 	color: #000000;
 	font-family: "Roboto", "Arial", sans-serif;
 	font-size: 18px;
@@ -549,6 +553,7 @@ button { /* Общий стиль для button */
 }
 .contacts-block .contacts-block_text,
 .contacts-block .contacts-block_phone {
+	margin-top: 20px;
 	color: #666666;
 	font-family: "Roboto", "Arial", sans-serif;
 	font-size: 16px;
@@ -564,7 +569,7 @@ button { /* Общий стиль для button */
 	display: block;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
-	margin: 37px 0 0 0;
+	margin-top: 35px;
 	width: 219px;
 	height: 50px;
 	background-color: #fb565a;
@@ -665,13 +670,13 @@ button { /* Общий стиль для button */
 	        box-shadow: inset 0 3px 0 rgba(0, 1, 1, 0.1);
 	background-color: #d7373b;
 }
-.footer-social_icons .social-link:active .icon {
+.social-link:active .icon {
 	opacity: 0.3;
 }
 /* CATALOG */
 .page-title {
 	background:  #eeeeee;
-	padding: 82px 0 116px;
+	padding: 74px 0 108px;
 }
 .page-title_text {
 	margin: 0;
@@ -690,14 +695,14 @@ button { /* Общий стиль для button */
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-	margin-top: 60px;
+	margin-top: 56px;
 }
 .items .items-filter {
 	width: 260px;
 	margin-right: 140px;
 }
 .items-filter .filter-form_range_title {
-	margin: 0 0 56px;
+	margin: 0 0 46px;
 	color: #000000;
 	font-family: "Roboto", "Arial", sans-serif;
 	font-size: 18px;
@@ -764,7 +769,7 @@ button { /* Общий стиль для button */
 	-webkit-box-pack: justify;
 	    -ms-flex-pack: justify;
 	        justify-content: space-between;
-	margin-bottom: 62px;
+	margin-bottom: 53px;
 }
 .range-block_scale_label_min,
 .range-block_scale_label_max {
@@ -777,7 +782,7 @@ button { /* Общий стиль для button */
 }
 .range-block_scale_input_min,
 .range-block_scale_input_max {
-	margin-left: 11px;
+	margin-left: 8px;
 	width: 80px;
 	height: 38px;
 	background-color: #eeeeee;
@@ -792,10 +797,10 @@ button { /* Общий стиль для button */
 	text-transform: uppercase;
 }
 .filter-form_radio {
-	margin-bottom: 51px;
+	margin-bottom: 60px;
 }
 .filter-form_radio .filter-form_radio_title {
-	margin: 0 0 21px;
+	margin: 0 0 -3px;
 	color: #000000;
 	font-family: "Roboto", "Arial", sans-serif;
 	font-size: 18px;
@@ -842,30 +847,36 @@ button { /* Общий стиль для button */
 	-o-transition: opacity 0.2s ease;
 	transition: opacity 0.2s ease;
 }
-#radio-adapt:disabled ~ label[for="radio-adapt"]:before,
-#radio-fix:disabled ~ label[for="radio-fix"]:before,
-#radio-stretch:disabled ~ label[for="radio-stretch"]:before {
+.radio-adapt:disabled ~ label[for="radio-adapt"]:before,
+.radio-fix:disabled ~ label[for="radio-fix"]:before,
+.radio-stretch:disabled ~ label[for="radio-stretch"]:before {
 	opacity: 0.1;
 	cursor: default;
 }
-#radio-adapt:disabled ~ label[for="radio-fix"],
-#radio-fix:disabled ~ label[for="radio-fix"],
-#radio-stretch:disabled ~ label[for="radio-fix"] {
+.radio-adapt:disabled ~ label[for="radio-fix"],
+.radio-fix:disabled ~ label[for="radio-fix"],
+.radio-stretch:disabled ~ label[for="radio-fix"] {
 	opacity: 0.3;
 	cursor: default;
 }
-#radio-adapt:checked ~ label[for="radio-adapt"]:before,
-#radio-fix:checked ~ label[for="radio-fix"]:before,
-#radio-stretch:checked ~ label[for="radio-stretch"]:before {
+.radio-adapt:checked ~ label[for="radio-adapt"]:before,
+.radio-fix:checked ~ label[for="radio-fix"]:before,
+.radio-stretch:checked ~ label[for="radio-stretch"]:before {
 	background-color: #4d4d4d;
 }
 .filter-form_radio_block .filter-form_radio_input {
-	display: none;
+/*	position: absolute;
+	left: 0;*/
+	opacity: 0;
+}
+.filter-form_radio_input:focus ~ .filter-form_radio_label:before {
+	opacity: 1;
 }
 .filter-form_checkbox {
-	margin-bottom: 48px;
+	margin-bottom: 50px;
 }
 .filter-form_checkbox_title {
+	margin-bottom: -5px;
 	color: #000000;
 	font-family: "Roboto", "Arial", sans-serif;
 	font-size: 18px;
@@ -875,7 +886,7 @@ button { /* Общий стиль для button */
 }
 .filter-form_checkbox_block_list {
 	height: 23px;
-	margin-bottom: 17px;
+	margin-bottom: 16px;
 }
 .filter-form_checkbox_block .filter-form_checkbox_label {
 	display: block;
@@ -899,31 +910,34 @@ button { /* Общий стиль для button */
 .filter-form_checkbox_block .filter-form_checkbox_label:hover:before {
 	opacity: 1;
 }
-#checkbox-slider:disabled ~ label[for="checkbox-slider"],
-#checkbox-advantages:disabled ~ label[for="checkbox-advantages"],
-#checkbox-news:disabled ~ label[for="checkbox-news"],
-#checkbox-gallery:disabled ~ label[for="checkbox-gallery"],
-#checkbox-basket:disabled ~ label[for="checkbox-basket"] {
+.checkbox-slider:disabled ~ label[for="checkbox-slider"],
+.checkbox-advantages:disabled ~ label[for="checkbox-advantages"],
+.checkbox-news:disabled ~ label[for="checkbox-news"],
+.checkbox-gallery:disabled ~ label[for="checkbox-gallery"],
+.checkbox-basket:disabled ~ label[for="checkbox-basket"] {
 	opacity: 0.3;
 	cursor: default;
 }
-#checkbox-slider:disabled ~ label[for="checkbox-slider"]:before,
-#checkbox-advantages:disabled ~ label[for="checkbox-advantages"]:before,
-#checkbox-news:disabled ~ label[for="checkbox-news"]:before,
-#checkbox-gallery:disabled ~ label[for="checkbox-gallery"]:before,
-#checkbox-basket:disabled ~ label[for="checkbox-basket"]:before {
+.checkbox-slider:disabled ~ label[for="checkbox-slider"]:before,
+.checkbox-advantages:disabled ~ label[for="checkbox-advantages"]:before,
+.checkbox-news:disabled ~ label[for="checkbox-news"]:before,
+.checkbox-gallery:disabled ~ label[for="checkbox-gallery"]:before,
+.checkbox-basket:disabled ~ label[for="checkbox-basket"]:before {
 	opacity: 0.1;
 	cursor: default;
 }
-#checkbox-slider:checked ~ label[for="checkbox-slider"]:before,
-#checkbox-advantages:checked ~ label[for="checkbox-advantages"]:before,
-#checkbox-news:checked ~ label[for="checkbox-news"]:before,
-#checkbox-gallery:checked ~ label[for="checkbox-gallery"]:before,
-#checkbox-basket:checked ~ label[for="checkbox-basket"]:before {
+.checkbox-slider:checked ~ label[for="checkbox-slider"]:before,
+.checkbox-advantages:checked ~ label[for="checkbox-advantages"]:before,
+.checkbox-news:checked ~ label[for="checkbox-news"]:before,
+.checkbox-gallery:checked ~ label[for="checkbox-gallery"]:before,
+.checkbox-basket:checked ~ label[for="checkbox-basket"]:before {
 	content: url("../images/checkbox-on.svg");
 }
 .filter-form_checkbox_block .filter-form_checkbox_input {
-	display: none;
+	opacity: 0;
+}
+.filter-form_checkbox_input:focus ~ .filter-form_checkbox_label:before {
+	opacity: 1;
 }
 .filter-form_submit {
 	width: 260px;
@@ -968,11 +982,11 @@ button { /* Общий стиль для button */
 	-webkit-box-align: center;
 	    -ms-flex-align: center;
 	        align-items: center;
-	margin-bottom: 59px;
+	margin-bottom: 55px;
 }
 .items-list_sort_title {
 	margin: 0;
-	width: 400px;
+	width: 382px;
 	color: #000000;
 	font-family: "Roboto", "Arial", sans-serif;
 	font-size: 18px;
@@ -989,6 +1003,7 @@ button { /* Общий стиль для button */
 	text-transform: uppercase;
 	text-decoration: none;
 	opacity: 0.3;
+	margin-top: 6px;
 }
 .items-list_sort .sort-active {
 	opacity: 1;
@@ -1002,7 +1017,7 @@ button { /* Общий стиль для button */
 	opacity: 1;
 }
 .items-list_sort .items-list_name {
-	margin-right: 48px;
+	margin-right: 25px;
 }
 .items-list_sort .items-list_down {
 	display: inline-block;
@@ -1137,6 +1152,20 @@ button { /* Общий стиль для button */
 	transition: opacity 0.6s ease;
 	opacity: 0.12;
 }
+.items-list_dispay_item .display-item_head:after {
+	content: "";
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	background-color: transparent;
+	border-radius: 100%;
+	-webkit-box-shadow: inset 20px 20px 0px 10px white,
+						24px 0px 0px 0px white,
+						48px 0px 0px 0px white;
+	        box-shadow: inset 20px 20px 0px 10px white,
+						24px 0px 0px 0px white,
+						48px 0px 0px 0px white;
+}
 .display-item_head .head_circle {
 	margin-right: 9px;
 	width: 15px;
@@ -1145,9 +1174,6 @@ button { /* Общий стиль для button */
 	border-radius: 100%;
 }
 .display-item_body {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
 	background-color: #e4f1f9;
 	width: 360px;
 	height: 576px;
@@ -1160,11 +1186,11 @@ button { /* Общий стиль для button */
 	border: 1px solid rgba(0, 1, 1, 0.1);
 }
 .display-item_body .display-item_body_description {
-	-ms-flex-item-align: end;
-	    align-self: flex-end;
 	position: absolute;
+	left: 0;
+	bottom: 0;
 	width: 360px;
-	height: 231px;
+	height: auto;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
 	padding: 35px 80px 0;
@@ -1217,7 +1243,7 @@ button { /* Общий стиль для button */
 	display: block;
 	-webkit-box-sizing: border-box;
 	        box-sizing: border-box;
-	margin: 0 auto;
+	margin: 0 auto 35px;
 	width: 200px;
 	height: 50px;
 	border-radius: 3px;

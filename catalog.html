@@ -5,7 +5,7 @@
 	<title>Дизайн студия «Нёрдс»</title>
 	<link rel="shortcut icon" href="./images/favicon.ico">
 	<link rel="stylesheet" href="./css/normalize.css">
-	<link rel="stylesheet" href="./css/min-style.css">
+	<link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
 <!-- Header -->
@@ -14,7 +14,7 @@
 		<nav class="navigation-site">
 			<div class="header-logo">
 				<a href="index.html" class="header-logo-link" title="Дизайн студия «Нёрдс»">
-					<img src="./images/nerds-logo.png" class="header-logo-img" width="160" height="65" alt="Дизайн студия «Нёрдс»">
+					<img src="./images/nerds-logo.svg" class="header-logo-img" width="160" height="65" alt="Дизайн студия «Нёрдс»">
 				</a>
 			</div>
 			<ul class="menu">
@@ -24,7 +24,7 @@
 				<li><a href="#contacts" title="Раздел «Контакты»">Контакты</a></li>
 			</ul>
 			<div class="header-basket">
-				<button type="button" class="basket" title="Открыть корзину">Корзина</button>
+				<a href="#" class="basket" title="Открыть корзину">Корзина</a>
 			</div>
 		</nav>
 	</div>
@@ -43,7 +43,7 @@
 		<div class="container">
 			<div class="items-wrapper">
 				<div class="items-filter">
-					<form action="#" class="filter-form" id="filter-form">
+					<form action="#" method="get" class="filter-form" id="filter-form">
 						<div class="filter-form_range">
 							<p class="filter-form_range_title">Стоимость:</p>
 							<div class="filter-form_range_block">
@@ -66,15 +66,15 @@
 							<p class="filter-form_radio_title">Сетка:</p>
 							<ul class="filter-form_radio_block">
 								<li class="filter-form_radio_block_list">
-									<input type="radio" name="radio-filter" id="radio-adapt" class="filter-form_radio_input" checked> <!-- +disabled -->
+									<input type="radio" name="radio-filter" id="radio-adapt" class="filter-form_radio_input radio-adapt" checked> <!-- +disabled -->
 									<label for="radio-adapt" class="filter-form_radio_label">Адаптивная</label>
 								</li>
 								<li class="filter-form_radio_block_list">
-									<input type="radio" name="radio-filter" id="radio-fix" class="filter-form_radio_input"><!-- +disabled -->
+									<input type="radio" name="radio-filter" id="radio-fix" class="filter-form_radio_input radio-fix"><!-- +disabled -->
 									<label for="radio-fix" class="filter-form_radio_label">Фиксированная</label>
 								</li>
 								<li class="filter-form_radio_block_list">
-									<input type="radio" name="radio-filter" id="radio-stretch" class="filter-form_radio_input"><!-- +disabled -->
+									<input type="radio" name="radio-filter" id="radio-stretch" class="filter-form_radio_input radio-stretch"><!-- +disabled -->
 									<label for="radio-stretch" class="filter-form_radio_label">Резиновая</label>
 								</li>
 							</ul>
@@ -83,23 +83,23 @@
 							<p class="filter-form_checkbox_title">Особенности:</p>
 							<ul class="filter-form_checkbox_block">
 								<li class="filter-form_checkbox_block_list">
-									<input type="checkbox" name="checkbox-filter" id="checkbox-slider" class="filter-form_checkbox_input" checked><!-- +disabled -->
+									<input type="checkbox" name="checkbox-filter" id="checkbox-slider" class="filter-form_checkbox_input checkbox-slider" checked><!-- +disabled -->
 									<label for="checkbox-slider" class="filter-form_checkbox_label">Слайдер</label>
 								</li>
 								<li class="filter-form_checkbox_block_list">
-									<input type="checkbox" name="checkbox-filter" id="checkbox-advantages" class="filter-form_checkbox_input"><!-- +disabled -->
+									<input type="checkbox" name="checkbox-filter" id="checkbox-advantages" class="filter-form_checkbox_input checkbox-advantages"><!-- +disabled -->
 									<label for="checkbox-advantages" class="filter-form_checkbox_label">Блок преимуществ</label>
 								</li>
 								<li class="filter-form_checkbox_block_list">
-									<input type="checkbox" name="checkbox-filter" id="checkbox-news" class="filter-form_checkbox_input" checked><!-- +disabled -->
+									<input type="checkbox" name="checkbox-filter" id="checkbox-news" class="filter-form_checkbox_input checkbox-news" checked><!-- +disabled -->
 									<label for="checkbox-news" class="filter-form_checkbox_label">Новости</label>
 								</li>
 								<li class="filter-form_checkbox_block_list">
-									<input type="checkbox" name="checkbox-filter" id="checkbox-gallery" class="filter-form_checkbox_input"><!-- +disabled -->
+									<input type="checkbox" name="checkbox-filter" id="checkbox-gallery" class="filter-form_checkbox_input checkbox-gallery"><!-- +disabled -->
 									<label for="checkbox-gallery" class="filter-form_checkbox_label">Галерея</label>
 								</li>
 								<li class="filter-form_checkbox_block_list">
-									<input type="checkbox" name="checkbox-filter" id="checkbox-basket" class="filter-form_checkbox_input"><!-- +disabled -->
+									<input type="checkbox" name="checkbox-filter" id="checkbox-basket" class="filter-form_checkbox_input checkbox-basket"><!-- +disabled -->
 									<label for="checkbox-basket" class="filter-form_checkbox_label">Корзина</label>
 								</li>
 							</ul>
@@ -120,11 +120,7 @@
 					<ul class="items-list_display">
 						<li class="items-list_dispay_item">
 							<div class="items-list_dispay_item_link">
-								<ul class="display-item_head">
-									<li class="head_circle"></li>
-									<li class="head_circle"></li>
-									<li class="head_circle"></li>
-								</ul>
+								<div class="display-item_head"></div>
 								<div class="display-item_body">
 									<img src="./images/img-sedona.jpg" class="display-item_body_img" width="360" height="576" alt="Седона - прекрасный город в аризоне">
 									<div class="display-item_body_description">
@@ -137,11 +133,7 @@
 						</li>
 						<li class="items-list_dispay_item">
 							<div class="items-list_dispay_item_link">
-								<ul class="display-item_head">
-									<li class="head_circle"></li>
-									<li class="head_circle"></li>
-									<li class="head_circle"></li>
-								</ul>
+								<div class="display-item_head"></div>
 								<div class="display-item_body">
 									<img src="./images/img-pink.jpg" class="display-item_body_img" width="360" height="576" alt="Седона - прекрасный город в аризоне">
 									<div class="display-item_body_description">
@@ -154,11 +146,7 @@
 						</li>
 						<li class="items-list_dispay_item">
 							<div class="items-list_dispay_item_link">
-								<ul class="display-item_head">
-									<li class="head_circle"></li>
-									<li class="head_circle"></li>
-									<li class="head_circle"></li>
-								</ul>
+								<div class="display-item_head"></div>
 								<div class="display-item_body">
 									<img src="./images/img-barbershop.jpg" class="display-item_body_img" width="360" height="576" alt="Седона - прекрасный город в аризоне">
 									<div class="display-item_body_description">
@@ -171,11 +159,7 @@
 						</li>						
 						<li class="items-list_dispay_item">
 							<div class="items-list_dispay_item_link">
-								<ul class="display-item_head">
-									<li class="head_circle"></li>
-									<li class="head_circle"></li>
-									<li class="head_circle"></li>
-								</ul>
+								<div class="display-item_head"></div>
 								<div class="display-item_body">
 									<img src="./images/img-mishka.jpg" class="display-item_body_img" width="360" height="576" alt="Седона - прекрасный город в аризоне">
 									<div class="display-item_body_description">
@@ -188,11 +172,7 @@
 						</li>
 						<li class="items-list_dispay_item">
 							<div class="items-list_dispay_item_link">
-								<ul class="display-item_head">
-									<li class="head_circle"></li>
-									<li class="head_circle"></li>
-									<li class="head_circle"></li>
-								</ul>
+								<div class="display-item_head"></div>
 								<div class="display-item_body">
 									<img src="./images/img-aplus.jpg" class="display-item_body_img" width="360" height="576" alt="Седона - прекрасный город в аризоне">
 									<div class="display-item_body_description">
@@ -205,11 +185,7 @@
 						</li>
 						<li class="items-list_dispay_item">
 							<div class="items-list_dispay_item_link">
-								<ul class="display-item_head">
-									<li class="head_circle"></li>
-									<li class="head_circle"></li>
-									<li class="head_circle"></li>
-								</ul>
+								<div class="display-item_head"></div>
 								<div class="display-item_body">
 									<img src="./images/img-kvast.jpg" class="display-item_body_img" width="360" height="576" alt="Седона - прекрасный город в аризоне">
 									<div class="display-item_body_description">
@@ -234,16 +210,14 @@
 	<section class="contacts">
 		<h2 class="visually-hidden">Контакты</h2>
 		<div class="container">
-			<ul class="contacts-block" id="contacts">
-				<li>
+			<div class="contacts-block" id="contacts">
 					<h3 class="contacts-block_title">NЁRDS DESIGN STUDIO</h3>
 					<address class="contacts-block_text">
 						191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8
 					</address>
 					<p class="contacts-block_phone">тел.&nbsp;<a href="tel:+78122757575">+7 (812) 275-75-75</a></p>
 					<a href="form-page.html" onclick="return false" class="contacts-block_button" target="_blank" title="Открыть форму обратной связи">Напишите нам</a>
-				</li>
-			</ul>
+			</div>
 		</div>
 		<div id="contacts-map" class="contacts-map"></div>
 	</section>
@@ -288,7 +262,7 @@
 			<li><button type="button" class="modal-close"></button></li>
 		</ul>
 		<div class="modal-content_body">
-			<form action="#" method="POST" class="modal-form">
+			<form action="#" method="post" class="modal-form">
 				<ul class="modal-form_container">
 					<li class="modal-form_name">
 						<label for="input-name" class="modal-form_name_label" title="Введите ваше имя и фамилию">Ваше имя:</label>
