@@ -29,13 +29,6 @@ body { /* Минимальная ширина для body */
 	margin: 0;
 	padding: 0;
 }
-button { /* Общий стиль для button */
-	background-color: transparent;
-	border: none;
-	cursor: pointer;
-	margin: 0;
-	padding: 0;
-}
 :focus {
 	outline-color: #fb565a;
 }
@@ -873,7 +866,7 @@ button { /* Общий стиль для button */
 	opacity: 1;
 }
 .filter-form_checkbox {
-	margin-bottom: 50px;
+	margin-bottom: 70px;
 }
 .filter-form_checkbox_title {
 	margin-bottom: -5px;
@@ -1334,8 +1327,13 @@ button { /* Общий стиль для button */
 	position: relative;
 	width: 21px;
 	height: 21px;
+	margin: 0;
+	padding: 0;
 	left: 10px;
+	background-color: transparent;
+	border: none;
 	overflow: hidden;
+	cursor: pointer;
 	opacity: 0.3;
 }
 .modal-close:hover {
